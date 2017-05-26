@@ -11,6 +11,7 @@ public class Classe {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
+		int qntdias;
 		System.out.println("Diga um dia do mês");
 		int dia = scanner.nextInt();
 		System.out.println("Diga o número do mês");
@@ -19,18 +20,18 @@ public class Classe {
 
 		if ((mes == 1) || (mes == 3) || (mes == 5) || (mes == 7) || (mes == 8) || (mes == 10) || (mes == 12)) {
 
-			int qntdias = 31;
+			qntdias = 31;
+
+		} else if (mes == 2) {
+			qntdias = 28;
 
 		} else {
-			if (mes == 2) {
-				int qntdias = 28;
-
-			} else {
-				int qntdias = 30;
-			}
+			qntdias = 30;
+		}
+		if ((dia <= qntdias) && (mes <= 12) && (mes >= 1)) {
+			System.out.println("Data válida: " + dia);
+			System.out.println("Mês válido: " + mes);
 
 		}
-
 	}
-
 }
