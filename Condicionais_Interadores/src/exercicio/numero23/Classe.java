@@ -7,6 +7,24 @@ texto resultante.
  */
 package exercicio.numero23;
 
-public class Classe {
+import java.util.Scanner;
 
+public class Classe {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Favor digitar seu nome completo");
+		String nome = scanner.nextLine();
+		scanner.close();
+
+		int posicao1 = nome.indexOf(" ");
+		int posicao2 = nome.lastIndexOf(" ");
+		posicao1++;
+		
+		nome = nome.substring(posicao1,posicao2);
+
+		System.out.println(nome);
+
+	}
 }
+
